@@ -7,9 +7,71 @@
     <title>Easy nav</title>
     <meta author="Luis Jurado Quesada">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function ver(n) {
+            document.getElementById("menu" + n).style.display = "block"
+        }
 
+        function ocultar(n) {
+            document.getElementById("menu" + n).style.display = "none"
+        }
+    </script>
 </head>
 <body>
-    
+    <div id="navegador">
+        <ul>
+            <li onmouseover="ver(1)" onmouseout="ocultar(1)">
+                <a href="#">Los numeros</a>
+                <div id="menu1">
+
+                    <ul>
+                        <li onmouseover="ver(3)" onmouseout="ocultar(3)">
+                            <p><a href="#">Primero</a></p>
+                            <div id="menu3">
+                                <p> 
+                                   Salen cosas 
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li onmouseover="ver(4)" onmouseout="ocultar(4)">
+                            <p><a href="#">Segundo</a></p>
+                            <div id="menu4">
+                                <p> 
+                                    Mas cosas
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li onmouseover="ver(5)" onmouseout="ocultar(5)">
+                            <p><a href="#">Tercero</a></p>
+                            <div id="menu5">
+                                <p>
+                                 Y tambien salen cosas
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </li>
+            <li onmouseover="ver(2)" onmouseout="ocultar(2)">
+                <a href="#">Saludos</a>
+                <div id="menu2">
+                    <p><a href="#"> adios </a></p>
+                    <p><a href="#">  hola
+                             </a></p>
+
+                </div>
+            </li>          
+        </ul>
+        <div class="borrar"></div>
+    </div>
+    <div></div>
+
+</div>
 </body>
 </html>
